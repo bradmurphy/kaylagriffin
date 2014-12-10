@@ -1,5 +1,4 @@
 Kayla Griffin
+================
 
-=====
-
-WordPress Portfolio
+Wordpress Portfolio
