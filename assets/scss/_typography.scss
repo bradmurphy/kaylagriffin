@@ -1,0 +1,17 @@
+// LOGO
+h1.logo {
+	position: relative;
+	left: 50%;
+	margin-left: -87px;
+	width: 175px;
+	height: 175px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+span.menu {
+	font-size: 2em;
+	letter-spacing: 2px;
+	font-style: italic;
+	color: $white;
+}

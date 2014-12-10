@@ -1,0 +1,182 @@
+.bx-pager {
+	display: none;
+}
+
+.bx-controls-direction {
+	display: none;
+}
+
+#about-content {
+	height: auto;
+	@include mq(laptop) {
+		height: 750px;
+		overflow-y: hidden;
+	}
+}
+.header-me {
+	display: none;
+	@include mq(laptop) {
+		position: relative;
+		top: 200px;
+		left: 155px;
+		display: block;
+	}
+}
+
+.slider {
+	float: left;
+	width: 100%;
+	height: auto !important;
+	div img {
+		max-width: 100%;
+	}
+	@include mq(tablet) {
+		position: relative;
+		left: 50%;
+		margin-left: -235px;
+		width: 470px !important;
+	}
+	@include mq(laptop) {
+		float: right;
+		margin-top: 15px;
+		position: static;
+		left: 0;
+		margin-left: 0;
+	}
+	@include mq(desktop) {
+		position: relative;
+		margin-right: 300px;
+	}
+}
+
+.controls {
+	position: relative;
+	left: 65px;
+	bottom: 500px;
+	z-index: 9999;
+	@include mq(android) {
+		bottom: 410px;
+		left: 145px;
+	}
+	@include mq(tablet) {
+		left: 190px;
+	}
+	@include mq(laptop) {
+		bottom: 550px;
+		left: 450px;
+	}
+	@include mq(desktop) {
+		left: 485px;
+	}
+	span {
+		position: relative;
+		top: -25px;
+		left: -10px;
+		font-size: 1.25em;
+		color: $orange;
+		font-style: italic;
+	}
+}
+
+.mobile {
+	@include mq(laptop) {
+		display: none;
+	}
+}
+
+.desktop {
+	display: none;
+	@include mq(laptop) {
+		display: block;
+	}
+}
+
+.slider {
+	div {
+		&:nth-child(2) {
+			.bx-caption {
+				width: 65%;
+				@include mq(laptop) {
+					width: 220px;
+				}
+				.squiggle {
+					left: 75px;
+					top: -15px;
+					@include mq(android) {
+						left: 200px;
+						top: 10px;
+					}
+					@include mq(laptop) {
+						left: 100px;
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			.bx-caption {
+				width: 65%;
+				@include mq(laptop) {
+					width: 220px;
+				}
+				.squiggle {
+					left: 75px;
+					top: 0;
+					@include mq(android) {
+						left: 100px;
+						top: 30px;
+					}
+					@include mq(tablet) {
+						left: 200px;
+					}
+					@include mq(laptop) {
+						left: 100px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.bx-caption {
+	padding: 100px 20px 10px 20px;
+	color: $charcoal;
+	font-size: 1em;
+	@include box-sizing(border-box);
+	span {
+		line-height: 1.5em;
+	}
+	strong {
+		font-weight: 600;
+		font-style: italic;
+	}
+	@include mq(tablet) {
+		width: 470px;
+	}
+	@include mq(laptop) {
+		font-size: 1.15em;
+		position: relative;
+		top: -425px;
+		left: -290px;
+		width: 275px;
+	}
+	@include mq(desktop) {
+		left: -310px;
+	}
+}
+
+.squiggle {
+	position: relative;
+	width: 125px;
+	@include mq(tablet) {
+		width: auto;
+	}
+}
+
+.sig {
+	position: relative;
+	width: 197px;
+	margin-left: -99px;
+	left: 50%;
+	margin-top: 20px;
+	clear: both;
+}

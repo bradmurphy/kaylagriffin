@@ -1,0 +1,110 @@
+// NAV ICON
+#nav-icon {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 35px;
+	height: 35px;
+	@include transform(rotate(0deg));
+	@include transition(all .25s ease-in-out);
+	cursor: pointer;
+	z-index: 4;
+	@include mq(android) {
+		margin-top: 4px;
+	}
+	@include mq(tablet) {
+		display: none;
+	}
+	&.open {
+		div {
+			&:nth-child(1) {
+				top: 13px;
+				width: 0%;
+				opacity: 0;
+				left: 50%;
+			}
+			&:nth-child(2) {
+				@include transform(rotate(45deg));
+			}
+			&:nth-child(3) {
+				@include transform(rotate(-45deg));
+			}
+			&:nth-child(4) {
+				top: 13px;
+				width: 0%;
+				opacity: 0;
+				left: 50%;
+			}
+		}
+	}
+	div {
+		display: block;
+		position: absolute;
+		height: 5px;
+		width: 100%;
+		border-radius: 20px;
+		background: $orange;
+		opacity: 1;
+		left: 0;
+		@include transform(rotate(0deg));
+		@include transition(all .25s ease-in-out);
+		&:nth-child(1) {
+			top: 0px;
+		}
+		&:nth-child(2), &:nth-child(3) {
+			top: 13px;
+		}
+		&:nth-child(4) {
+			top: 26px;
+		}
+	}
+	@include mq(tablet) {
+		display: none;
+	}
+}
+
+// MOBILE MENU STYLES
+
+hr {
+	border: none;
+	height: 2px;
+	background: $light-orange;
+	width: 80%;
+	margin-left: 10%;
+}
+
+// NAVY STYLES
+
+nav .menu-menu-container ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li {
+		padding: 10px 0;
+		@include mq(tablet) {
+			padding: 5px 0;
+		}
+		a {
+			color: $white;
+			font-size: 1.25em;
+			text-decoration: none;
+			@include mq(tablet) {
+				color: $charcoal;
+				font-size: 1.625em;
+				font-weight: 300;
+				font-style: italic;
+				letter-spacing: 1px;
+				text-transform: lowercase;
+				@include transition(all .3s ease-in-out);
+				&:hover {
+					color: $orange;
+					font-size: 3.75em;
+				}
+				&.active {
+					color: $orange;
+					font-size: 3.75em;
+				}
+			}
+		}
+	}
+}

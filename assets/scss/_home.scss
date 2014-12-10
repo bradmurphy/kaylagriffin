@@ -1,0 +1,103 @@
+#main-home {
+	background-repeat: no-repeat;
+	background-size: 0%;
+	@include mq(tablet) {
+		background-size: 75%;
+		background-position: 100% 40%;
+	}
+	@include mq(laptop) {
+		background-size: 75%;
+		background-position: 100% 52%;
+	}
+	@include mq(desktop) {
+		background-position: 80% 65%;
+	}
+}
+
+.intro-text p {
+	font-style: italic;
+	color: $charcoal;
+	font-size: 1em;
+	width: 85%;
+	margin-left: 7.5%;
+	@include mq(tablet) {
+		width: 330px;
+		margin-left: 200px;
+		margin-top: 230px;
+	}
+	@include mq(laptop) {
+		font-size: 1.15em;
+		margin-left: 225px;
+		margin-top: 250px;
+	}
+	@include mq(desktop) {
+		margin-left: 385px;
+		margin-top: 220px;
+	}
+}
+
+a.mail-link {
+	position: relative;
+  display: inline-block;
+  color: $charcoal;
+	text-decoration: none;
+	font-size: 1.5em;
+	font-style: italic;
+	width: 100%;
+	text-align: center;
+	@include mq(tablet) {
+		width: 295px;
+		left: 0;
+		margin-top: 80px;
+	}
+	@include mq(laptop) {
+		font-size: 2.5em;
+		margin-top: 100px;
+		width: 470px;
+	}
+	@include mq(desktop) {
+		margin-top: 165px;
+		width: 630px;
+	}
+}
+
+.social-wrap {
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 280px;
+	a {
+		@include transition(all .3s ease-in-out);
+		&:hover {
+			opacity: .75;
+		}
+		img {
+			width: auto;
+			@include mq(tablet) {
+				width: 60px;
+			}
+			@include mq(laptop) {
+				width: auto;
+			}
+		}
+	}
+	a:nth-child(2) {
+		margin: 0 5px;
+	}
+	@include mq(android) {
+		width: 300px;
+		margin-left: 90px;
+	}
+	@include mq(tablet) {
+		margin-top: 10px;
+		margin-left: 50px;
+	}
+	@include mq(laptop) {
+		margin: 0 15px;
+		margin-top: 15px;
+		margin-left: 94px;
+	}
+	@include mq(desktop) {
+		margin-top: 15px;
+		margin-left: 180px;
+	}
+}

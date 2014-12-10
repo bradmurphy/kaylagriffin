@@ -1,0 +1,221 @@
+#project-page {
+	background-repeat: no-repeat;
+	background-position: -115px -20px;
+	padding: 0 0 20px 0;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		background-position: -45px -20px;
+	}
+	@include mq(tablet) {
+		background-position: 20px 85px;
+	}
+	@include mq(laptop) {
+		background-position: 100px 85px;
+	}
+}
+
+h3.project-title {
+	float: left;
+	width: 100%;
+	font-style: italic;
+	font-weight: 300;
+	font-size: 2em;
+	color: $orange;
+	line-height: 1em;
+	@include mq(tablet) {
+		font-size: 2.5em;
+	}
+}
+
+h4.project-tagline {
+	float: left;
+	width: 100%;
+	font-style: italic;
+	font-weight: 300;
+	font-size: 1em;
+	color: $charcoal;
+	line-height: 1em;
+	margin-top: -15px;
+	@include mq(tablet) {
+		margin-top: -25px;
+		font-size: 1.5em;
+	}
+}
+
+.project-copy p {
+	float: left;
+	width: 100%;
+	font-size: 1em;
+	color: $charcoal;
+	margin-top: -10px;
+	font-weight: 300;
+	line-height: 1.25em;
+	a {
+		@include link($orange);
+		text-indent: 5px;
+		text-decoration: none;
+		padding-bottom: 2px;
+		&:after {
+			height: 1px;
+		}
+	}
+	@include mq(laptop) {
+		width: 550px;
+	}
+}
+
+span.member {
+	float: left;
+	width: 100%;
+	color: $charcoal;
+	font-style: italic;
+	a {
+		@include link($orange);
+		text-indent: 5px;
+		text-decoration: none;
+		padding-bottom: 2px;
+		&:after {
+			height: 1px;
+		}
+	}
+	@include mq(laptop) {
+		font-size: 1.15em;
+	}
+}
+
+.project-info {
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 10px 20px;
+	a {
+		@include link($orange);
+		text-indent: 5px;
+		text-decoration: none;
+		padding-bottom: 2px;
+		&:after {
+			height: 1px;
+		}
+	}
+	@include box-sizing(border-box);
+	@include mq(laptop) {
+		font-size: 1.15em;
+		padding: 10px 20px;
+	}
+	@include mq(desktop) {
+		width: 94%;
+		margin: 10px 3%;
+	}
+}
+
+.project-image-wrap {
+	float: left;
+	width: 100%;
+	padding: 5px 20px;
+	margin: 20px 0;
+	@include box-sizing(border-box);
+	@include mq(desktop) {
+		width: 94%;
+		margin: 10px 3%;
+	}
+	p {
+		float: left;
+		width: 100%;
+		color: $charcoal;
+		font-size: 1em;
+		font-weight: 300;
+		line-height: 1.25em;
+		@include mq(laptop) {
+			font-size: 1.15em;
+		}
+	}
+	img {
+		max-width: 100%;
+	}
+}
+
+.carousel-holder {
+	float: left;
+	width: 100%;
+	margin: 10px 0;
+	position: relative;
+	@include mq(desktop) {
+		width: 94%;
+		margin: 10px 3%;
+	}
+}
+
+.carousel {
+	float: left;
+	width: 100%;
+	height: auto !important;
+	div img {
+		max-width: 100%;
+	}
+	div .bx-caption {
+		width: auto;
+		padding: 0 0;
+		top: 0;
+		left: 0;
+	}
+}
+
+.bx-viewport {
+	padding: 10px 20px;
+	@include box-sizing(border-box);
+}
+
+.carousel-controls {
+	position: absolute;
+	bottom: 35%;
+	width: 100%;
+	padding: 10px 40px;
+	z-index: 99 !important;
+	display: none;
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		display: block;
+		bottom: 36%;
+	}
+	@include mq(laptop) {
+		bottom: 40%;
+	}
+	.carousel-prev {
+		float: left;
+	}
+	.carousel-next {
+		float: right;
+	}
+}
+
+.page-work-holder {
+	float: left;
+	width: 100%;
+	margin: 100px 0 50px 0;
+}
+
+.back-link {
+	@include link($orange);
+	text-indent: 5px;
+	text-decoration: none;
+	padding-bottom: 2px;
+	position: absolute !important;
+	top: 0;
+	right: 0;
+	margin-top: 50px;
+	&:after {
+		height: 1px;
+	}
+}
+
+.please-swipe {
+	float: left;
+	width: 100%;
+	padding: 10px 20px;
+	span {
+		color: $orange;
+	}
+	@include mq(tablet) {
+		display: none;
+	}
+}

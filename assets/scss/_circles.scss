@@ -1,0 +1,43 @@
+.work-circle {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 44px;
+	width: 232px;
+	height: 232px;
+	overflow: hidden;
+	@include mq(android) {
+		float: left;
+		margin: 10px 4px;
+	}
+	@include mq(tablet) {
+		margin: 10px 26px;
+	}
+	@include mq(laptop) {
+		margin: 10px 10px;
+	}
+	@include mq(desktop) {
+		margin: 10px 19px;
+	}
+	.work-img {
+		float: left;
+		width: 100%;
+		z-index: 1;
+	}
+	.work-hover {
+		position: relative;
+		top: -236px;
+		left: 0;
+		z-index: 2;
+		opacity: 0;
+		@include transition(opacity .3s ease-in-out);
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.work-margin {
+	@include mq(tablet) {
+		margin-top: 75px;
+	}
+}
